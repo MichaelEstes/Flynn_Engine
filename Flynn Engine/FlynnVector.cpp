@@ -56,8 +56,8 @@ bool FlynnVector2::operator!=(const FlynnVector2& rightVec) const{
 
 FlynnVector3 FlynnVector3::Cross(FlynnVector3 rightVec){
 	return FlynnVector3((y * rightVec.z) - (z * rightVec.y), 
-					(z * rightVec.x) - (x * rightVec.z), 
-					(x * rightVec.y) - (y * rightVec.x));
+						(z * rightVec.x) - (x * rightVec.z), 
+						(x * rightVec.y) - (y * rightVec.x));
 }
 
 FlynnVector3 FlynnVector3::operator+(FlynnVector3 rightVec)const{

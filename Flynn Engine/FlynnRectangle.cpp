@@ -12,7 +12,7 @@ void FlynnRectangle2D::SetPoints(){
 bool FlynnRectangle2D::PointCollision(FlynnVector2 point)const{
 	FlynnVector2 max = GetBottomRight();
 	return (point.x < max.x && point.x > topLeft.x &&
-		point.y < max.y && point.y > topLeft.y);
+			point.y < max.y && point.y > topLeft.y);
 }
 
 bool FlynnRectangle2D::RectCollision(FlynnRectangle2D rectB)const{
@@ -26,14 +26,16 @@ bool FlynnRectangle2D::RectCollision(FlynnRectangle2D rectB)const{
 bool FlynnRectangle2D::CircleCollision(FlynnCircle2D circle){
 	FlynnVector2 point;
 	SetPoints();
-	for (int i = 0; i < numPoints; ++i){
+	for (int i = 0; i < numPoints; ++i)
+	{
 		point = rectPoints[i];
 		point.x = point.x - circle.center.x;
 		point.x *= point.x;
 		point.y = point.y - circle.center.y;
 		point.y *= point.y;
 
-		if (point.x + point.y < circle.radius * circle.radius){
+		if (point.x + point.y < circle.radius * circle.radius)
+		{
 			return true;
 		}
 

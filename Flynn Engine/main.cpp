@@ -1,7 +1,5 @@
 #include <iostream>
 #include <cmath>
-#include <Windows.h>
-
 #include "FlynnVector.h"
 #include "FlynnRectangle.h"
 #include "FlynnCircle.h"
@@ -34,10 +32,12 @@ int main(){
 
 	testVec3c = testVec3a + testVec3b;
 
-	if (testVec3a != testVec3b){
+	if (testVec3a != testVec3b)
+	{
 		cout << "True" << endl;
 	}
-	else{
+	else
+	{
 		cout << "False" << endl;
 	}
 

@@ -36,6 +36,9 @@
     <ClInclude Include="FlynnCircle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="FlynnTexture.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FlynnVector.cpp">
