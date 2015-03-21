@@ -84,12 +84,14 @@
     <ClInclude Include="FlynnRay.h" />
     <ClInclude Include="FlynnRectangle.h" />
     <ClInclude Include="FlynnTexture.h" />
+    <ClInclude Include="FlynnTriangle.h" />
     <ClInclude Include="FlynnVector.h" />
     <ClInclude Include="FlynnVertex.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FlynnPoint.cpp" />
     <ClCompile Include="FlynnRectangle.cpp" />
+    <ClCompile Include="FlynnTriangle.cpp" />
     <ClCompile Include="FlynnVector.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>

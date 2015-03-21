@@ -4,6 +4,7 @@
 #ifndef FLYNNVECTOR_H
 #define FLYNNVECTOR_H
 
+#define pi 3.14159
 
 class FlynnVector2{
 public:
@@ -13,7 +14,10 @@ public:
 
 	float GetLength() const { return sqrt((x * x) + (y * y)); }
 	void Normalize(){ *this /= GetLength(); }
+	FlynnVector2 Normalized(){ return *this /= GetLength(); }
 	float Dot(FlynnVector2 rightVec) const { return (x * rightVec.x) + (y * rightVec.y); }
+	float Angle(FlynnVector2 rightVec);
+	float GreaterAngle(FlynnVector2 rightVec){ return float((2 * pi) - Angle(rightVec)); }
 
 	FlynnVector2 operator+ (FlynnVector2) const;
 	FlynnVector2 operator- (FlynnVector2) const;
@@ -36,8 +40,11 @@ public:
 
 	float GetLength() const { return sqrt((x * x) + (y * y) + (z * z)); }
 	void Normalize(){ *this /= GetLength(); }
+	FlynnVector3 Normalized(){ return *this /= GetLength(); }
 	float Dot(FlynnVector3 rightVec) const { return (x * rightVec.x) + (y * rightVec.y) + (z * rightVec.z); }
 	FlynnVector3 Cross(FlynnVector3);
+	float Angle(FlynnVector3 rightVec);
+	float GreaterAngle(FlynnVector3 rightVec){ return float((2 * pi) - Angle(rightVec)); }
 
 	FlynnVector3 operator+ (FlynnVector3) const;
 	FlynnVector3 operator- (FlynnVector3) const;
