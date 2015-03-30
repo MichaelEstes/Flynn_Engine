@@ -6,6 +6,8 @@
 
 #define pi 3.14159
 
+class FlynnVector3;
+
 class FlynnVector2{
 public:
 	float x, y;
@@ -16,8 +18,9 @@ public:
 	void Normalize(){ *this /= GetLength(); }
 	FlynnVector2 Normalized(){ return *this /= GetLength(); }
 	float Dot(FlynnVector2 rightVec) const { return (x * rightVec.x) + (y * rightVec.y); }
-	float Angle(FlynnVector2 rightVec);
+	float Angle(FlynnVector2);
 	float GreaterAngle(FlynnVector2 rightVec){ return float((2 * pi) - Angle(rightVec)); }
+	void Vec3ToVec2(FlynnVector3);
 
 	FlynnVector2 operator+ (FlynnVector2) const;
 	FlynnVector2 operator- (FlynnVector2) const;
@@ -43,8 +46,9 @@ public:
 	FlynnVector3 Normalized(){ return *this /= GetLength(); }
 	float Dot(FlynnVector3 rightVec) const { return (x * rightVec.x) + (y * rightVec.y) + (z * rightVec.z); }
 	FlynnVector3 Cross(FlynnVector3);
-	float Angle(FlynnVector3 rightVec);
+	float Angle(FlynnVector3);
 	float GreaterAngle(FlynnVector3 rightVec){ return float((2 * pi) - Angle(rightVec)); }
+	void Vec2ToVec3(FlynnVector2 rightVec){ x = rightVec.x, y = rightVec.y, z = 0; }
 
 	FlynnVector3 operator+ (FlynnVector3) const;
 	FlynnVector3 operator- (FlynnVector3) const;
@@ -59,4 +63,4 @@ public:
 	bool operator!= (const FlynnVector3&) const;
 };
 
-#endif
+#endif 

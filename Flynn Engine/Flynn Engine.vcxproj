@@ -83,7 +83,6 @@
     <ClInclude Include="FlynnPoint.h" />
     <ClInclude Include="FlynnRay.h" />
     <ClInclude Include="FlynnRectangle.h" />
-    <ClInclude Include="FlynnTexture.h" />
     <ClInclude Include="FlynnTriangle.h" />
     <ClInclude Include="FlynnVector.h" />
     <ClInclude Include="FlynnVertex.h" />

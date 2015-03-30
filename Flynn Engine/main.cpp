@@ -20,7 +20,7 @@ int main(){
 	FlynnRectangle2D testRectB(FlynnVector2(7, 10), 5, 5);
 	FlynnVector2 rectPoint;
 	FlynnCircle2D testCircle(FlynnVector2(10,10), 10);
-	FlynnRay2D testRay(testVec2a, testVec2b, 1);
+	FlynnRay3D testRay(testVec3a, testVec3b);
 	
 	
 	testDot = testVec3a.Dot(testVec3b);
@@ -31,6 +31,8 @@ int main(){
 	testVec3b /= 2;
 
 	testVec3c = testVec3a + testVec3b;
+
+	testVec2a.Vec3ToVec2(testVec3a);
 
 	if (testVec3a != testVec3b)
 	{
@@ -65,13 +67,6 @@ int main(){
 	cout << testCircle.Diameter() << endl;
 	cout << testCircle.Circumference() << endl;
 	cout << testCircle.Area() << endl;
-
-	cout << testRay.direction.x << " " << testRay.direction.y << endl;
-	cout << testRay.length << endl;
-
-	testRay.Update();
-	FlynnVector2 rayPoint = testRay.FindPoint();
-	cout << rayPoint.x << " " << rayPoint.y << endl;
 
 	cout << testRect.PointCollision(FlynnVector2(5, 10)) << endl;
 	cout << testRect.RectCollision(testRectB) << endl;

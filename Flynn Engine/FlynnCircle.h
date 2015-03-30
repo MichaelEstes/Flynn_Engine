@@ -1,7 +1,5 @@
 #include "FlynnVector.h"
 
-#define pi 3.14159f
-
 #ifndef FLYNNCIRCLE_H
 #define FLYNNCIRCLE_H
 

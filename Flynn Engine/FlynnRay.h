@@ -6,20 +6,25 @@
 typedef enum rayType{
 	ObjectRay = 0,
 	LightRay,
-	CameraRay
+	CameraRay,
+	EyeRay
 };
 
-class FlynnRay2D{
+class FlynnRay3D{
 public:
-	FlynnVector2 origin, direction, pointOnRay;
-	float length;
-	rayType type;
-	FlynnRay2D() : origin(0, 0), direction(0, 0), length(0){};
-	FlynnRay2D(FlynnVector2 o, FlynnVector2 d, float l = 0) : origin(o), direction(d), length(l){
-	direction.Normalize();};
+	
+	FlynnRay3D() : origin(0, 0, 0), direction(0, 0, 0){};
+	FlynnRay3D(FlynnVector3 o, FlynnVector3 d) : origin(o), direction(d.Normalized()){}
+	FlynnVector3 GetPointAt(float length)const{ return origin + (direction * length); }
+	void SetOrigin(FlynnVector3 o){ origin = o; }
+	FlynnVector3 GetOrigin(){ return origin; }
+	void SetDirection(FlynnVector3 d){ direction = d.Normalized(); }
+	FlynnVector3 GetDirection(){ return direction; }
 
-	FlynnVector2 FindPoint()const{ return origin + (direction * length); }
-	void Update(float increment = 0.1f){ length += increment; };
+
+private:
+	FlynnVector3 origin, direction;
+	rayType type;
 
 };
 

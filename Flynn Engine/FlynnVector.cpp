@@ -1,9 +1,15 @@
 #include "FlynnVector.h"
 
+
 float FlynnVector2::Angle(FlynnVector2 rightVec){
 	FlynnVector2 tempVec = Normalized();
 	float temp = tempVec.Dot(rightVec.Normalized());
 	return float(acos(temp));
+}
+
+void FlynnVector2::Vec3ToVec2(FlynnVector3 rightVec){
+	x = rightVec.x;
+	y = rightVec.y;
 }
 
 FlynnVector2 FlynnVector2::operator+(FlynnVector2 rightVec)const{
