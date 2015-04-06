@@ -63,4 +63,11 @@ public:
 	bool operator!= (const FlynnVector3&) const;
 };
 
+class FlynnVector4 : public FlynnVector3{
+public:
+	float w;
+
+
+};
+
 #endif 

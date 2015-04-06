@@ -43,7 +43,7 @@ int main(){
 		cout << "False" << endl;
 	}
 
-	cout << testRect.width << " " << testRect.height << endl;
+	//cout << testRect.width << " " << testRect.height << endl;
 	rectPoint = testRect.GetTopRight();
 	cout << rectPoint.x << " " << rectPoint.y << endl;
 	rectPoint = testRect.GetBottomLeft();
@@ -53,7 +53,7 @@ int main(){
 	cout << testRect.Area() << endl;
 	cout << testRect.Perimeter() << endl;
 	cout << testRect.Diagonal() << endl;
-	cout << testRect.numPoints << endl;
+	//cout << testRect.numPoints << endl;
 
 	cout << testVec3a.x << " " << testVec3a.y << " " << testVec3a.z << endl;
 	cout << testVec3b.x << " " << testVec3b.y << " " << testVec3b.z << endl;
@@ -62,8 +62,8 @@ int main(){
 	cout << testDot << endl;
 	cout << testVec3Cross.x << " " << testVec3Cross.y << " " << testVec3Cross.z << endl;
 
-	cout << testCircle.center.x << " " << testCircle.center.y << endl;
-	cout << testCircle.radius << endl;
+	cout << testCircle.GetCenterX() << " " << testCircle.GetCenterY() << endl;
+	cout << testCircle.GetRadius() << endl;
 	cout << testCircle.Diameter() << endl;
 	cout << testCircle.Circumference() << endl;
 	cout << testCircle.Area() << endl;

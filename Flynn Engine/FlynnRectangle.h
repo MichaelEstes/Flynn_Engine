@@ -7,10 +7,7 @@
 
 class FlynnRectangle2D{
   public:
-	const int numPoints = 4;
-	float width, height;
-	FlynnVector2 topLeft, rectPoints[4];
-
+	
 	FlynnRectangle2D() : topLeft(0, 0), width(1), height(1){}
 	FlynnRectangle2D(FlynnVector2 topL, float w, float h) : topLeft(topL), width(w), height(h){}
 
@@ -26,6 +23,11 @@ class FlynnRectangle2D{
 	bool PointCollision(FlynnVector2)const;
 	bool RectCollision(FlynnRectangle2D)const;
 	bool CircleCollision(FlynnCircle2D);
+
+private:
+	const int numPoints = 4;
+	float width, height;
+	FlynnVector2 topLeft, rectPoints[4];
 };
 
 #endif

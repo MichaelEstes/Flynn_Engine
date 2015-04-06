@@ -29,12 +29,12 @@ bool FlynnRectangle2D::CircleCollision(FlynnCircle2D circle){
 	for (int i = 0; i < numPoints; ++i)
 	{
 		point = rectPoints[i];
-		point.x = point.x - circle.center.x;
+		point.x = point.x - circle.GetCenterX();
 		point.x *= point.x;
-		point.y = point.y - circle.center.y;
+		point.y = point.y - circle.GetCenterY();
 		point.y *= point.y;
 
-		if (point.x + point.y < circle.radius * circle.radius)
+		if (point.x + point.y < circle.GetRadius() * circle.GetRadius())
 		{
 			return true;
 		}
