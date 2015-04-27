@@ -3,13 +3,6 @@
 #ifndef FLYNNRAY_H
 #define FLYNNRAY_H
 
-typedef enum rayType{
-	ObjectRay = 0,
-	LightRay,
-	CameraRay,
-	EyeRay
-};
-
 class FlynnRay3D{
 public:
 	
@@ -24,8 +17,6 @@ public:
 
 private:
 	FlynnVector3 origin, direction;
-	rayType type;
-
 };
 
 #endif
