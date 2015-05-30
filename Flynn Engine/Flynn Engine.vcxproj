@@ -80,6 +80,8 @@
   <ItemGroup>
     <ClInclude Include="FlynnCircle.h" />
     <ClInclude Include="FlynnColor.h" />
+    <ClInclude Include="FlynnFile.h" />
+    <ClInclude Include="FlynnOBJ.h" />
     <ClInclude Include="FlynnPoint.h" />
     <ClInclude Include="FlynnRay.h" />
     <ClInclude Include="FlynnRectangle.h" />
@@ -88,6 +90,8 @@
     <ClInclude Include="FlynnVertex.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="FlynnFile.cpp" />
+    <ClCompile Include="FlynnOBJ.cpp" />
     <ClCompile Include="FlynnPoint.cpp" />
     <ClCompile Include="FlynnRectangle.cpp" />
     <ClCompile Include="FlynnTriangle.cpp" />

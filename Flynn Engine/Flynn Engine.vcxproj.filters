@@ -39,6 +39,12 @@
     <ClInclude Include="FlynnTriangle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="FlynnOBJ.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FlynnFile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FlynnVector.cpp">
@@ -54,6 +60,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="FlynnTriangle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FlynnOBJ.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FlynnFile.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
